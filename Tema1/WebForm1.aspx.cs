@@ -13,15 +13,18 @@ namespace Tema1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string CS = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
-            using (SqlConnection con = new SqlConnection(CS))
+            
+            if (!Page.IsPostBack)
             {
-                SqlCommand cmd = new SqlCommand("Select CityId, CityName, Country from City", con);
-                con.Open();
-                DropDownList1.DataSource = cmd.ExecuteReader();
-                 DropDownList1.DataBind();
-
+                List<string> list = new List<string>() { "Bucuresti", "Paris", "Londra", "Berlin" };
+                DropDownList1.DataSource = list;
+                DropDownList1.DataBind();
             }
+         
+
+            
+           
+           
         }
     }
 }

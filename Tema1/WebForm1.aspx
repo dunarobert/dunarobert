@@ -9,9 +9,10 @@
 <body>
     <form id="form1" runat="server">
     <div>
-        <asp:DropDownList ID="DropDownList1" DataTextField = "CityName" DataValueField = "CityId" runat="server">
-        </asp:DropDownList>
+        <asp:Label ID="Label1" runat="server" Text="Selecteaza un Oras"></asp:Label>
     </div>
+        <asp:DropDownList id="DropDownList1" runat="server">
+        </asp:DropDownList>
     </form>
 </body>
 </html>
