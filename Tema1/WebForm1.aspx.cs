@@ -20,11 +20,6 @@ namespace Tema1
                 DropDownList1.DataSource = list;
                 DropDownList1.DataBind();
             }
-         
-
-            
-           
-           
-        }
+         }
     }
 }
